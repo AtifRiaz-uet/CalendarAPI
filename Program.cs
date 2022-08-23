@@ -8,7 +8,9 @@ namespace GettingHolidays
     class Program
     {
         const string apiKey = "AIzaSyCkHEq9efc73mgl0k3Ib7wwI54Gle5hX3M";
-        const string calendarID = "en-gb.pk#holiday@group.v.calendar.google.com";
+        const string pakCalendarID = "en-gb.pk#holiday@group.v.calendar.google.com";
+        const string uaeCalendarID = "en-gb.ae.official#holiday@group.v.calendar.google.com";
+        
 
         static async Task Main(string[] args)
         {
@@ -19,7 +21,7 @@ namespace GettingHolidays
                 ApiKey = apiKey,
                 ApplicationName = "API key Example"
             });
-            var request = service.Events.List(calendarID);
+            var request = service.Events.List(pakCalendarID);
             request.Fields = "items(summary,start,end)";
             var response = await request.ExecuteAsync();
             foreach (var item in response.Items)
