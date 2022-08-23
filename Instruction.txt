@@ -1,0 +1,3 @@
+Download .net6 and Install.
+In Visual Studio, simply right click on your project in Solution Explorer and choose Properties. 
+Under Application > General > Target framework, choose . NET 6.0
